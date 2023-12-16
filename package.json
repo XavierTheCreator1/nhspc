@@ -1,0 +1,9 @@
+{
+  "name": "nhspc",
+  "version": "0.0.0",
+  "description": "The NHSPC's official informational website and dashboard",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Dylan G. and Ethan B.",
+  "license": "ISC"
+}
