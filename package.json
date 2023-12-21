@@ -2,8 +2,14 @@
   "name": "nhspc",
   "version": "0.0.0",
   "description": "The NHSPC's official informational website and dashboard",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {},
-  "author": "Dylan G. and Ethan B.",
-  "license": "ISC"
+  "author": "Dylan Griffin and Ethan Belcher",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2"
+  }
 }
