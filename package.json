@@ -2,9 +2,9 @@
   "name": "nhspc",
   "version": "0.0.0",
   "description": "The NHSPC's official informational website and dashboard",
-  "main": "app.ts",
+  "main": "src/app.ts",
   "scripts": {
-    "app": "node app.ts"
+    "app": "node src/app.ts"
   },
   "author": "Dylan Griffin and Ethan Belcher",
   "license": "ISC",
