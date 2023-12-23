@@ -20,6 +20,7 @@
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
     "curly": "error",
-    "eqeqeq": "error"
+    "eqeqeq": "error",
+    "@typescript-eslint/no-var-requires": 0
   }
 }
