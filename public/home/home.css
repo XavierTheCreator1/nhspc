@@ -1,0 +1,11 @@
+:root {
+  /* Colors */
+  --black: #000000;
+  --prussian-blue: #0c314e;
+  --azure: #0079de;
+  --white: #ffffff;
+}
+
+h1 {
+  color: var(--azure);
+}

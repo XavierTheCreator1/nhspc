@@ -1,18 +1,25 @@
 {
-  "name": "nhspc",
-  "version": "0.0.0",
-  "description": "The NHSPC's official informational website and dashboard",
-  "main": "src/app.ts",
+  "name": "nhspc-website-and-dashboard",
+  "version": "1.0.0",
+  "description": "The NHSPC's official website and dashboard.",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node src/app"
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XavierTheCreator1/nhspc.git"
   },
   "author": "Dylan Griffin and Ethan Belcher",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XavierTheCreator1/nhspc/issues"
+  },
+  "homepage": "https://github.com/XavierTheCreator1/nhspc#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
   "devDependencies": {
-    "@types/node": "^20.10.5",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
-    "eslint": "^8.56.0",
-    "eslint-plugin-react": "^7.33.2"
+    "nodemon": "^3.0.2"
   }
 }
