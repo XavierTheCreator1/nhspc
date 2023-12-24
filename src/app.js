@@ -1,9 +1,10 @@
 const express = require("express");
+const helmet = require("helmet");
 const path = require("path");
 
 const app = express();
 
-app.use(express.static("./public"));
+app.use(express.static("./public"), helmet());
 
 app.all("*", (req, res) => {
   res.status(404).send("resource not found");
