@@ -2,7 +2,7 @@
   "name": "nhspc-website-and-dashboard",
   "version": "1.0.0",
   "description": "The NHSPC's official website and dashboard.",
-  "main": "src/app.js",
+  "main": "src/server/app.js",
   "scripts": {
     "start": "nodemon ."
   },
