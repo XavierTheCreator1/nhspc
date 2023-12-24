@@ -1,6 +1,7 @@
 const express = require("express");
 const helmet = require("helmet");
 const path = require("path");
+require("dotenv").config();
 
 const port = 5000;
 
@@ -9,7 +10,11 @@ const app = express();
 app.use(express.static("./public"), helmet());
 
 app.get("/api/setUsername", (req, res) => {
-  res.send(`tagId is set to ${res.query.key}`);
+  if (req.query.apikey === process.env.apikey) {
+    res.status(200).send("Accepted :)");
+  } else {
+    res.status(403).send("Forbidden >:(");
+  }
 });
 
 app.all("*", (req, res) => {
