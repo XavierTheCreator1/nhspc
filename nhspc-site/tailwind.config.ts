@@ -11,13 +11,6 @@ const config: Config = {
       gridTemplateColumns: {
         '13': 'repeat(13, minmax(0, 1fr))',
       },
-      colors: {
-        blue: {
-          400: '#2589FE',
-          500: '#0070F3',
-          600: '#2F6FEB',
-        },
-      },
     },
     keyframes: {
       shimmer: {
@@ -27,6 +20,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('daisyui')],
 };
 export default config;
