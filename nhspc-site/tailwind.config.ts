@@ -6,20 +6,9 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {
-    extend: {
-      gridTemplateColumns: {
-        '13': 'repeat(13, minmax(0, 1fr))',
-      },
-    },
-    keyframes: {
-      shimmer: {
-        '100%': {
-          transform: 'translateX(100%)',
-        },
-      },
-    },
-  },
   plugins: [require('@tailwindcss/forms'), require('daisyui')],
+  daisyui: {
+    themes: ["dim", "night"],
+  },
 };
 export default config;
