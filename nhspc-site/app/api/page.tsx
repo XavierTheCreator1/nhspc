@@ -1,18 +1,13 @@
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
 
-const ApiPage = () => {
+const API = () => {
   return (
-    <>
-      <h1>Welcome to the NHSPC API!</h1>
-      <p>
-        Back to the{' '}
-        <Link href="/" className="link-hover link">
-          homepage
-        </Link>
-      </p>
-    </>
+    <main>
+      This is the nhspc api used for sending post requests to the nhps discord
+      bot, whiz
+    </main>
   );
 };
 
-export default ApiPage;
+export default API;
