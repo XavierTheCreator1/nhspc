@@ -3,10 +3,14 @@ import Link from 'next/link';
 
 const NotFoundPage = () => {
   return (
-    <main>
-      <h1>404 - Page Not Found</h1>
+    <main className="nfmain">
+      <title>Page Not Found!</title>
+      <h1 className="http404">Page Not Found</h1>
+      <br />
+      <h1 className="nfsub">Did you mis-spell the url?</h1>
+      <br />
       <Link href="/" className="link-hover link">
-        Back to reality
+        Home
       </Link>
     </main>
   );
