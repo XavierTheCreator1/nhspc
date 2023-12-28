@@ -92,16 +92,6 @@ app.get("/api/createReminder", async (req, res) => {
   }
 });
 
-// client.once("ready", async () => {
-//   const guild = await client.guilds.fetch("1185016065340735589");
-//   let channels = Array.from(await guild.channels.fetch());
-//   console.log(channels);
-//   const textChannels = channels
-//     .filter(([channelId, channel]) => channel.type === ChannelType.GuildText)
-//     .map(([channelId, channel]) => ({ id: channelId, name: channel.name }));
-//   console.log(textChannels); // [ { id: '1185017672879046737', name: 'whiz' } ];
-// });
-
 app.get("/api", (req, res) => {
   res.status(403).send("Forbidden");
 });
