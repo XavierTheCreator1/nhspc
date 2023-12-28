@@ -2,6 +2,7 @@
 
 import React from 'react';
 import axios, { AxiosResponse, AxiosError } from 'axios';
+import Link from 'next/link';
 
 const ApiRequestComponent: React.FC = () => {
   // Replace the URL with the endpoint you want to make a GET request to
@@ -31,11 +32,17 @@ const ApiRequestComponent: React.FC = () => {
   }, []); // Empty dependency array means this effect runs once after the component mounts
 
   return (
-    <div>
+    <>
       <h1 className="flex h-screen w-full items-center justify-center text-center text-8xl">
         Welcome to the API!
       </h1>
-    </div>
+      <Link
+        href="/"
+        className="link-hover link flex h-screen w-full items-center justify-center text-center text-8xl"
+      >
+        Back home
+      </Link>
+    </>
   );
 };
 
