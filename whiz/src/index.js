@@ -45,7 +45,7 @@ const sql = postgres({
 });
 
 async function getPgVersion() {
-  const result = await sql`select version()`;
+  const result = await sql` select version()`;
   console.log(result);
 }
 
@@ -61,13 +61,13 @@ const port = 5000;
 app.use(cors());
 
 app.get("/api/createReminder", async (req, res) => {
-  if (req.query.key != apikey) {
+  if (req.query.key !== apikey) {
     res.status(403).send("Forbidden");
   } else {
     if (
-      req.query.date == undefined ||
-      req.query.topic == undefined ||
-      req.query.channel == undefined
+      req.query.date === undefined ||
+      req.query.topic === undefined ||
+      req.query.channel === undefined
     ) {
       res.status(400).send("-1");
     } else {
