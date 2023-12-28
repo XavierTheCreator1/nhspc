@@ -67,29 +67,27 @@ app.get("/api/createReminder", async (req, res) => {
     if (
       req.query.date === undefined ||
       req.query.topic === undefined ||
-      req.query.channel === undefined
+      req.query.channelid === undefined
     ) {
       res.status(400).send("-1");
     } else {
       const result = await sql`
           INSERT INTO r (date, topic, channel)
-          VALUES (${req.query.date}, ${req.query.topic}, ${req.query.channel})
+          VALUES (${req.query.date}, ${req.query.topic}, ${req.query.channelid})
           RETURNING *`;
       const guild = await client.guilds.fetch("1185016065340735589");
-      const channel = await guild.channels
-        .fetch(req.query.channelid)
-        .then(async () => {
-          await channel.send(`${req.query.topic}`);
-          res.status(202).json(result);
-        })
-        .catch((err) => {
-          console.log(err);
-          res
-            .status(400)
-            .send(
-              "invalid channel id - verify the channel exists within the nhspc discord server and that it was typed correctly."
-            );
-        });
+      const channel = await guild.channels.fetch(`${req.query.channelid}`);
+      try {
+        await channel.send(`${req.query.topic}`);
+        res.status(202).json(result);
+      } catch (err) {
+        console.log(err);
+        res
+          .status(400)
+          .send(
+            "invalid channel id - verify the channel exists within the nhspc discord server and that it was typed correctly."
+          );
+      }
     }
   }
 });
