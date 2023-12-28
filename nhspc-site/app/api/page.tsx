@@ -11,7 +11,7 @@ const ApiRequestComponent: React.FC = () => {
     key: '0SrJgD50TofGSHGi1ZsKoS1XHJwuX9yDMRjyUDptR4PMTYrUOs',
     date: '2023',
     topic: 'Hello from the website!',
-    channel: '1185017672879046737',
+    channelid: '1185017672879046737',
   };
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const ApiRequestComponent: React.FC = () => {
 
   return (
     <div>
-      <p>Check the browser's console for the api data</p>
+      <p>whenimetchainasumma</p>
       {/* You can include JSX elements and components as needed */}
     </div>
   );

@@ -79,12 +79,13 @@ app.get("/api/createReminder", async (req, res) => {
           RETURNING *`;
       const guild = await client.guilds.fetch("1185016065340735589");
       const channel = await guild.channels
-        .fetch(req.query.channel)
+        .fetch(req.query.channelid)
         .then(async () => {
           await channel.send(`${req.query.topic}`);
           res.status(202).json(result);
         })
         .catch((err) => {
+          console.log(err);
           res
             .status(400)
             .send(
