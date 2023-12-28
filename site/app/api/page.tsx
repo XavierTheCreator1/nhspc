@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 
-const ApiRequestComponent: React.FC = () => {
-  // Replace the URL with the endpoint you want to make a GET request to
+const APIPage = () => {
   const apiUrl: string = 'http://localhost:5000/api/createReminder';
+
+  console.log(process.env.TOKEN);
 
   const queryParams = {
     key: '0SrJgD50TofGSHGi1ZsKoS1XHJwuX9yDMRjyUDptR4PMTYrUOs',
@@ -12,21 +13,41 @@ const ApiRequestComponent: React.FC = () => {
     channelid: '1185017672879046737',
   };
 
-  React.useEffect(() => {
-    // Make a GET request using Axios
-    axios
-      .get(apiUrl, {
-        params: queryParams,
-      })
-      .then((response: AxiosResponse) => {
-        // Handle the successful response
-        console.log('Response data:', response.data);
-      })
-      .catch((error: AxiosError) => {
-        // Handle errors
-        console.error('Error making GET request:', error.message);
-      });
-  }, []);
+  const {
+    Client,
+    Events,
+    GatewayIntentBits,
+    ActivityType,
+    ChannelType,
+  } = require('discord.js');
+
+  /*
+rm -rf node_modules
+rm package-lock.json
+npm install
+ */
+
+  const client = new Client({
+    intents: [
+      GatewayIntentBits.Guilds,
+      GatewayIntentBits.GuildMessages,
+      GatewayIntentBits.MessageContent,
+      GatewayIntentBits.GuildPresences,
+      GatewayIntentBits.GuildMessageReactions,
+      GatewayIntentBits.GuildMembers,
+    ],
+  });
+
+  require('dotenv').config();
+
+  client.once('ready', () => {
+    client.user.setActivity({
+      type: ActivityType.Custom,
+      name: 'Ready and pending!',
+    });
+  });
+
+  client.login(process.env.TOKEN);
 
   return (
     <>
@@ -36,7 +57,7 @@ const ApiRequestComponent: React.FC = () => {
       </h1>
       <Link
         href="/"
-        className="Whats up gamers link-hover link flex h-screen w-full items-center justify-center text-center text-2xl"
+        className="link-hover link flex h-screen w-full items-center justify-center text-center text-2xl"
       >
         Back home
       </Link>
@@ -44,4 +65,4 @@ const ApiRequestComponent: React.FC = () => {
   );
 };
 
-export default ApiRequestComponent;
+export default APIPage;
