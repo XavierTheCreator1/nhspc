@@ -32,8 +32,9 @@ const ApiRequestComponent: React.FC = () => {
 
   return (
     <div>
-      <p>whenimetchainasumma</p>
-      {/* You can include JSX elements and components as needed */}
+      <h1 className="h-screen w-full text-center text-8xl">
+        Welcome to the API!
+      </h1>
     </div>
   );
 };
