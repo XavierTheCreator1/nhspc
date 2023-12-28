@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import axios, { AxiosResponse, AxiosError } from 'axios';
 
 const ApiRequestComponent: React.FC = () => {
@@ -14,7 +14,7 @@ const ApiRequestComponent: React.FC = () => {
     channel: '1185017672879046737',
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     // Make a GET request using Axios
     axios
       .get(apiUrl, {
