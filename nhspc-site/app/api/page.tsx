@@ -32,7 +32,7 @@ const ApiRequestComponent: React.FC = () => {
 
   return (
     <div>
-      <h1 className="h-screen w-full text-center text-8xl">
+      <h1 className="flex h-screen w-full items-center justify-center text-center text-8xl">
         Welcome to the API!
       </h1>
     </div>
