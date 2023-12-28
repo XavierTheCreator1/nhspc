@@ -22,12 +22,10 @@ require("dotenv").config();
 client.once("ready", () => {
   client.user.setActivity({
     type: ActivityType.Custom,
-    name: "Under Construction",
+    name: "Ready and pending!",
   });
 });
 
-// postgres
-// app.js
 const postgres = require("postgres");
 require("dotenv").config();
 
