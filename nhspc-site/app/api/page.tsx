@@ -10,7 +10,8 @@ const ApiRequestComponent: React.FC = () => {
   const queryParams = {
     key: '0SrJgD50TofGSHGi1ZsKoS1XHJwuX9yDMRjyUDptR4PMTYrUOs',
     date: '2023',
-    topic: 'Test reminder for development purposes',
+    topic: 'Hello from the website!',
+    channel: '1185017672879046737',
   };
 
   useEffect(() => {
