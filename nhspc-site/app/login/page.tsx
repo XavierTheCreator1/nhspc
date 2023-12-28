@@ -1,6 +1,6 @@
 import React from 'react';
-import StudentNumber from '@/app/ui/login/StudentNumber';
-import RememberMe from '@/app/ui/login/RememberMe';
+import StudentNumber from '@/app/components/login/StudentNumber';
+import RememberMe from '@/app/components/login/RememberMe';
 
 const LoginPage = () => {
   return (

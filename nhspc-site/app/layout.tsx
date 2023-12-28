@@ -1,4 +1,4 @@
-import '@/app/ui/global.css';
+import '@/app/components/global.css';
 
 export default function RootLayout({
   children,

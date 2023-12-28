@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import axios, { AxiosResponse, AxiosError } from 'axios';
 
 const ApiRequestComponent: React.FC = () => {
@@ -14,7 +14,7 @@ const ApiRequestComponent: React.FC = () => {
     channelid: '1185017672879046737',
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     // Make a GET request using Axios
     axios
       .get(apiUrl, {
@@ -32,8 +32,9 @@ const ApiRequestComponent: React.FC = () => {
 
   return (
     <div>
-      <p>whenimetchainasumma</p>
-      {/* You can include JSX elements and components as needed */}
+      <h1 className="flex h-screen w-full items-center justify-center text-center text-8xl">
+        Welcome to the API!
+      </h1>
     </div>
   );
 };
