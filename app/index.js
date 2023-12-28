@@ -24,6 +24,7 @@ client.once('ready', () => {
     type: ActivityType.Custom,
     name: 'Ready and pending!',
   });
+  console.log('Hello Worlddddddddddddddddddddddddddddddddddddddddw');
 });
 
 client.login(process.env.TOKEN);

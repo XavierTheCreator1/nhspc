@@ -22,16 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "app/lib/placeholder-data.js",
-    "scripts/seed.js",
-    "app/lib/codingImages.ts",
-    "app/pages/500.js",
-    "app/pages/404.js"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
