@@ -1,7 +1,4 @@
-'use client';
-
 import React from 'react';
-import axios, { AxiosResponse, AxiosError } from 'axios';
 import Link from 'next/link';
 
 const ApiRequestComponent: React.FC = () => {
@@ -29,16 +26,17 @@ const ApiRequestComponent: React.FC = () => {
         // Handle errors
         console.error('Error making GET request:', error.message);
       });
-  }, []); // Empty dependency array means this effect runs once after the component mounts
+  }, []);
 
   return (
     <>
       <h1 className="flex h-screen w-full items-center justify-center text-center text-8xl">
-        Welcome to the API!
+        Welcome gamers <br />
+        to the API!
       </h1>
       <Link
         href="/"
-        className="link-hover link flex h-screen w-full items-center justify-center text-center text-8xl"
+        className="Whats up gamers link-hover link flex h-screen w-full items-center justify-center text-center text-2xl"
       >
         Back home
       </Link>
