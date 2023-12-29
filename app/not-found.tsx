@@ -7,7 +7,7 @@ const NotFoundPage = () => {
       <h1 className="mb-5 text-8xl text-error">Error 404</h1>
       <h2 className="mb-10 text-6xl">Page Not Found</h2>
       <p className="mb-20 text-2xl">Did you misspell the url?</p>
-      <Link href="/" className="link-hover link">
+      <Link href="/">
         <button className="btn btn-primary btn-wide">Back Home</button>
       </Link>
     </main>

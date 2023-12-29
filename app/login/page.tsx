@@ -1,36 +1,52 @@
 import React from "react";
+import Navbar from "@/app/components/Navbar";
+import FormText from "../components/login/FormText";
 import StudentNumber from "@/app/components/login/StudentNumber";
 import RememberMe from "@/app/components/login/RememberMe";
 import Password from "@/app/components/login/Password";
+import Link from "next/link";
 
 const LoginPage = () => {
   return (
-    <main className="flex h-screen w-full items-center justify-center">
-      <form className="flex h-3/5 items-center justify-center rounded-2xl bg-base-300 flex-col form-control w-full max-w-xs">
-        <label className="form-control w-5/6 max-w-xs">
-          <div className="label">
-            <span className="label-text">Student Number</span>
+    <>
+      <Navbar />
+      <main className="flex h-screen w-full items-center justify-center">
+        <form
+          target="/login"
+          method="post"
+          autoComplete="on"
+          className="flex h-3/5 rounded-2xl flex-col form-control bg-base-300 w-full max-w-xs items-center justify-center"
+        >
+          <h1 className="text-4xl text-primary text-center">
+            Sign into the NHSPC
+          </h1>
+          <div className="mb-4"></div>
+          <FormText label="Student Number">
+            <StudentNumber />
+          </FormText>
+          <div className="mb-2"></div>
+          <FormText label="Password">
+            <Password />
+          </FormText>
+          <div className="mb-2"></div>
+          <label className="cursor-pointer label w-1/2">
+            <span className="label-text">Remember Me</span>
+            <RememberMe />
+          </label>
+          <div className="mb-4"></div>
+          <button className="btn btn-primary btn-wide">Sign In</button>
+          <div className="w-5/6">
+            <div className="divider divider-neutral">OR</div>
           </div>
-          <StudentNumber />
-        </label>
-        <div className="mb-2"></div>
-        <label className="form-control w-full max-w-xs">
-          <div className="label">
-            <span className="label-text">Password</span>
-          </div>
-          <Password />
-        </label>
-        <div className="mb-2"></div>
-        <label className="cursor-pointer label w-1/2">
-          <span className="label-text">Remember Me</span>
-          <RememberMe />
-        </label>
-        <div className="mb-4"></div>
-        <button className="btn btn-primary btn-wide" type="submit">
-          Log In
-        </button>
-      </form>
-    </main>
+          <p>
+            Don&apos;t have an account?{" "}
+            <Link href="/join" className="link link-primary">
+              Sign Up
+            </Link>
+          </p>
+        </form>
+      </main>
+    </>
   );
 };
 

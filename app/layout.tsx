@@ -1,13 +1,12 @@
-import '@/app/components/global.css';
+import React from "react";
+import "@/app/components/global.css";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" data-theme="night">
       <body>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;
