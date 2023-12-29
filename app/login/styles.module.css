@@ -1,0 +1,9 @@
+.shiftedMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: calc(100% - 4rem);
+  width: 100%;
+}
