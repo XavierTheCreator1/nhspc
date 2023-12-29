@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 const NotFoundPage = () => {
   return (
@@ -8,7 +8,7 @@ const NotFoundPage = () => {
       <h2 className="mb-10 text-6xl">Page Not Found</h2>
       <p className="mb-20 text-2xl">Did you misspell the url?</p>
       <Link href="/" className="link-hover link">
-        <button className="btn btn-error btn-wide">Back Home</button>
+        <button className="btn btn-primary btn-wide">Back Home</button>
       </Link>
     </main>
   );
