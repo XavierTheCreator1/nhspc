@@ -6,16 +6,19 @@ import RememberMe from "@/app/components/login/RememberMe";
 import Password from "@/app/components/login/Password";
 import Link from "next/link";
 
+import styles from "./styles.module.css";
+import { symlink } from "fs";
+
 const LoginPage = () => {
   return (
     <>
       <Navbar />
-      <main className="flex h-screen w-full items-center justify-center">
+      <main className={styles.shiftedMain}>
         <form
           target="/login"
           method="post"
           autoComplete="on"
-          className="flex h-3/5 rounded-2xl flex-col form-control bg-base-300 w-full max-w-xs items-center justify-center"
+          className="flex h-full min-h-fit rounded-2xl flex-col form-control bg-base-300 w-full items-center justify-center sm:max-w-xs sm:h-4/5"
         >
           <h1 className="text-4xl text-primary text-center">
             Sign into the NHSPC
@@ -29,7 +32,7 @@ const LoginPage = () => {
             <Password />
           </FormText>
           <div className="mb-2"></div>
-          <label className="cursor-pointer label w-1/2">
+          <label className="cursor-pointer label w-2/5 sm:w-1/2">
             <span className="label-text">Remember Me</span>
             <RememberMe />
           </label>

@@ -1,15 +1,14 @@
-import Navbar from "@/app/components/Navbar";
 import Welcome from "@/app/components/home/Welcome";
-import Footer from "@/app/components/home/Footer";
+import InfoPage from "@/app/components/InfoPage";
 
 export default function HomePage() {
   return (
     <>
-      <Navbar />
-      <main>
-        <Welcome />
-      </main>
-      <Footer />
+      <InfoPage>
+        <main>
+          <Welcome />
+        </main>
+      </InfoPage>
     </>
   );
 }
