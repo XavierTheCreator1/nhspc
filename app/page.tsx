@@ -1,4 +1,4 @@
-import Navbar from "@/app/components/home/Navbar";
+import Navbar from "@/app/components/Navbar";
 import Welcome from "@/app/components/home/Welcome";
 import Footer from "@/app/components/home/Footer";
 

@@ -3,9 +3,10 @@ import React from "react";
 const StudentNumber = () => {
   return (
     <input
-      type="number"
-      placeholder="Ex. 1234567"
+      type="password"
+      placeholder="Ex. MYS3CR3TP422W0RD"
       className="input input-bordered w-full max-w-xs"
+      required
     />
   );
 };
